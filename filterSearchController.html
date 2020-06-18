@@ -1,0 +1,38 @@
+<template>
+    
+
+    
+      
+        <div class="slds-m-bottom_small">
+            <lightning-input type="text"
+               value={sFilter}
+               label="Filter"
+               onchange={updateFilterKey}
+               ></lightning-input>
+         </div>
+    
+     
+  
+         
+         <lightning-button label="Filter Data"
+            onclick={handleFilterData}
+            variant="brand"></lightning-button>
+     
+    
+
+
+    
+        <div class="slds-m-around_medium">
+            <div class="slds-grid slds-gutters">
+               
+                <template for:each={accountrecords} for:item="acc">
+                    <div class="slds-m-around_medium slds-col slds-box slds-theme_default" key={acc.Id}>
+                    <lightning-card key={acc.Id}>{acc.Name}</lightning-card>
+                  </div>
+                </template>
+                
+            </div>
+        </div>
+    
+   
+</template>

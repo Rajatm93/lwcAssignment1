@@ -1,0 +1,36 @@
+<template>
+
+
+   <div class="slds-m-around_large slds-box slds-theme_default">
+   <div class="slds-grid slds-gutters">
+      <div class="slds-col slds-box slds-theme_default slds-m-around_large">
+         <div class="slds-m-bottom_small">
+            <lightning-input type="text"
+               value={sVal}
+               label="Name:"
+               onchange={updateSeachKey}
+               ></lightning-input>
+         </div>
+   
+         <div class="slds-m-bottom_small">
+          <lightning-input type="text"
+             value={sCount}
+             label="Records #:"
+             onchange={updateCountKey}
+             ></lightning-input>
+         </div>
+  
+         
+         <lightning-button label="Search"
+            onclick={handleSearch}
+            variant="brand"></lightning-button></div>
+
+      
+      <div class="slds-col slds-box slds-theme_default slds-m-around_large">
+         <div class="slds-m-bottom_small"><c-Filter-Search-Controller accountrecords={accounts} originalaccountrecords={accounts} ></c-Filter-Search-Controller></div>
+      </div>
+   </div>
+</div>
+
+
+ </template>
